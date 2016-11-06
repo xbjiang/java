@@ -1,5 +1,7 @@
 public class HelloWorld {
 	public static void main(String[] args) {
-		System.out.println("Hello, World!");
+		String str1 = "java";
+		String str2 = new String("java");
+		System.out.println(str1.equals(str2));
 	}
 }
