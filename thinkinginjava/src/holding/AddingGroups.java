@@ -18,6 +18,5 @@ public class AddingGroups {
     	System.out.println(list);
     	list.set(1, 99);
     	System.out.println(list);
-    	
     }
 }
