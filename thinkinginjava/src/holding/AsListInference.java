@@ -9,7 +9,7 @@ class Heavy extends Powder {}
 class Crusty extends Snow {}
 class Slush extends Snow {}
 
-public class AsLListInference {
+public class AsListInference {
     public static void main(String[] args)
     {
     	List<Snow> snow1 = Arrays.asList(
