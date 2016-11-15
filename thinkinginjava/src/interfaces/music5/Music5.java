@@ -17,12 +17,48 @@ class Wind implements Instrument {
 
 class Percussion implements Instrument {
 	public void play(Note n) {
-		System.out.println(this + ".play()" + n);
+		System.out.println(this + ".play() " + n);
 	}
 	public String toString() {return "Percussion";}
 	public void adjust() {System.out.println(this + ".adjust()");}
 }
 
-public class Music5 {
+class Stringed implements Instrument {
+	public void play(Note n) {
+		System.out.println(this + ".play() " + n);
+	}
+	public String toString() {return "Stringed";}
+	public void adjust() {
+		System.out.println(this + ".adjust()");
+	}
+}
 
+class Brass extends Wind {
+	public String toString() {return "Brass";}
+}
+
+class WoodWind extends Wind {
+	public String toString() {return "WoodWind";}
+}
+
+public class Music5 {
+    static void tune(Instrument i) {
+    	i.play(Note.MIDDLE_C);
+    }
+    
+    static void tuneAll(Instrument[] e) {
+    	for (Instrument i : e)
+    		tune(i);
+    }
+    
+    public static void main(String[] args) {
+    	Instrument[] orchestra = {
+    			new Wind(),
+    			new Percussion(),
+    			new Stringed(),
+    			new Brass(),
+    			new WoodWind()
+    	};
+    	tuneAll(orchestra);
+    }
 }
