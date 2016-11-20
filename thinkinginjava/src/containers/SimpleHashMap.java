@@ -48,4 +48,15 @@ public class SimpleHashMap<K,V> extends AbstractMap<K,V> {
     	}
     	return set;
     }
+    public static void main(String[] args)
+    {
+    	SimpleHashMap<String, String> map = 
+    			new SimpleHashMap<>();
+    	map.put("fuck", "you");
+    	map.put("ass", "hole");
+    	map.put("a piece","of shit");
+    	System.out.println(map);
+    	System.out.println(map.get("ass"));
+    	System.out.println(map.entrySet());
+    }
 }
