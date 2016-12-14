@@ -1,0 +1,11 @@
+package net.mindview.util;
+
+import java.util.concurrent.*;
+
+public class DeamonThreadFactory implements ThreadFactory {
+	public Thread newThread(Runnable r) {
+		Thread t = new Thread(r);
+		t.setDaemon(true);
+		return t;
+	}
+}
